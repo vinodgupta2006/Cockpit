@@ -14,31 +14,31 @@ class EditUser extends Component {
         }
     }
 
-    setName = (e) => {
+    setEditName = (e) => {
         this.setState({
             name: e.target.value,
         });
     }
 
-    setPhone = (e) => {
+    setEditPhone = (e) => {
         this.setState({
             phone: e.target.value,
         });
     }
 
-    setEmail = (e) => {
+    setEditEmail = (e) => {
         this.setState({
             email: e.target.value,
         });
     }
 
-    setGender = (e) => {
+    setEditGender = (e) => {
         this.setState({
             gender: e.target.value,
         });
     }
 
-    setLocation = (e) => {
+    setEditLocation = (e) => {
         this.setState({
             location: e.target.value,
         });
@@ -60,21 +60,21 @@ class EditUser extends Component {
                 <div className="addUserForm">
                     <form>
                         Name:<br />
-                        <input type="text" name="name" value={listData.name} onChange={this.setName} /><br />
+                        <input type="text" name="name" value={listData.name} onChange={this.setEditName} /><br />
                         Phone Number:<br />
-                        <input type="number" name="phone" value={listData.phone} onChange={this.setPhone} /><br />
+                        <input type="number" name="phone" value={listData.phone} onChange={this.setEditPhone} /><br />
                         Email Id:<br />
-                        <input type="text" name="email" value={listData.email} onChange={this.setEmail} /><br />
+                        <input type="text" name="email" value={listData.email} onChange={this.setEditEmail} /><br />
                         Gender:<br />
-                        <select name="gender" onChange={this.setGender} value={listData.gender}>
+                        <select name="gender" onChange={this.setEditGender} value={listData.gender}>
                             <option value="">Select</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select><br />
                         Locations:<br />
-                        <input type="checkbox" name="banglore" value="banglore" onChange={this.setLocation} /> Banglore<br />
-                        <input type="checkbox" name="mumbai" value="mumbai" onChange={this.setLocation} /> Mumbai<br />
-                        <input type="checkbox" name="delhi" value="delhi" onChange={this.setLocation} /> Delhi<br />
+                        <input type="checkbox" name="banglore" value="banglore" onChange={this.setEditLocation} /> Banglore<br />
+                        <input type="checkbox" name="mumbai" value="mumbai" onChange={this.setEditLocation} /> Mumbai<br />
+                        <input type="checkbox" name="delhi" value="delhi" onChange={this.setEditLocation} /> Delhi<br />
                         <br />
                         <input type="button" value="Update" onClick={this.updateUser} />
 
